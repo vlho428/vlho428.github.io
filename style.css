@@ -1,46 +1,130 @@
-body {
-       margin: 0;
-       background-color: #080808;
-       color: #00ff88;
-       font-family: 'Courier New', Courier, monospace;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       height: 100vh;
-       overflow: hidden;
-   }
-   
-   .terminal-container {
-       border: 1px solid #333;
-       padding: 40px;
-       background: rgba(0, 255, 136, 0.02);
-       box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
-       max-width: 600px;
-       width: 100%;
-   }
-   
-   .glitch-text {
-       font-size: 2.5rem;
-       text-shadow: 2px 2px 0px #005533;
-       margin-bottom: 10px;
-   }
-   
-   .highlight { color: #fff; background: #00ff88; padding: 0 5px; color: #000; font-weight: bold; }
-   
-   .dashboard { margin: 30px 0; color: #888; border-left: 2px solid #00ff88; padding-left: 15px; }
-   
-   .cyber-btn {
-       display: inline-block;
-       padding: 12px 24px;
-       border: 1px solid #00ff88;
-       color: #00ff88;
-       text-decoration: none;
-       font-weight: bold;
-       transition: all 0.3s ease;
-   }
-   
-   .cyber-btn:hover {
-       background-color: #00ff88;
-       color: #000;
-       box-shadow: 0 0 15px #00ff88;
-   }
+:root {
+    --bg-dark: #0a0e17;
+    --primary-cyan: #00f0ff;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(15, 23, 42, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 確保 Canvas 永遠在最底層 */
+#network-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* 導覽列 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; }
+.logo span { color: var(--primary-cyan); }
+.nav-links a { color: var(--text-main); text-decoration: none; margin-left: 20px; font-size: 0.9rem; transition: 0.3s;}
+.nav-links a:hover { color: var(--primary-cyan); }
+
+/* 主視覺區 */
+.hero {
+    margin-top: 10vh;
+    margin-bottom: 80px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* 按鈕設計 */
+.cta-group { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: var(--primary-cyan);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover { border-color: var(--primary-cyan); color: var(--primary-cyan); }
+
+/* 毛玻璃指標面板 */
+.glass-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(16px);
+    border-radius: 12px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.metric { display: flex; flex-direction: column; }
+.metric-value { font-family: 'JetBrains Mono', monospace; font-size: 2rem; color: var(--primary-cyan); margin-bottom: 5px; font-weight: 700; }
+.metric-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+/* 技術棧 */
+.tech-stack h3 { color: var(--text-muted); font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 20px; }
+.tags { display: flex; gap: 10px; flex-wrap: wrap; }
+.tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: var(--text-muted);
+}
