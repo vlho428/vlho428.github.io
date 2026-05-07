@@ -1,13 +1,47 @@
-site_name: 量化研究與 AI 筆記庫
-site_dir: notes  # 關鍵：將編譯結果輸出到根目錄的 notes 資料夾
+site_name: AQR_LAB 筆記庫
+site_dir: notes
+
 theme:
   name: material
+  # 1. 切換色彩配置
   palette:
-    scheme: slate
-    primary: teal
+    # 預設深色模式 (與你的首頁呼應)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black       # 頂部導覽列顏色
+      accent: teal         # 連結與按鈕高亮顏色 (青綠色)
+  
+  # 2. 更改字體 (自動從 Google Fonts 引入)
+  font:
+    text: Noto Sans TC     # 繁體中文無襯線字體
+    code: JetBrains Mono   # 專為開發者設計的程式碼字體
+  
+  # 3. 網站 Logo 與圖示
+  # 你可以將你平時生成的 AI 高畫質專業人像照，或是動漫風格的精緻圖像
+  # 存成 logo.png 放在 docs/ 目錄下作為網站標誌
+  logo: assets/logo.png
+  favicon: assets/logo.png
 
+  # 4. 開啟高階排版功能
+  features:
+    - navigation.tabs          # 頂部顯示大分類標籤
+    - navigation.top           # 顯示「回到頂部」按鈕
+    - navigation.tracking      # 捲動時左側目錄自動跟隨
+    - content.code.copy        # 程式碼區塊右上角加入「複製」按鈕
+    - content.code.annotate    # 允許在程式碼旁邊加註解
+
+# 開啟 Markdown 進階擴充 (讓排版更靈活)
 markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
+  - admonition               # 支援警告/提示區塊
+  - pymdownx.details         # 支援可折疊區塊
+  - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+      use_pygments: true       # 讓程式碼高亮顏色與主題一致
+  - pymdownx.arithmatex:     # 量化公式必備
+      generic: true
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js

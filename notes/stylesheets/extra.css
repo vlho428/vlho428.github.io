@@ -1,0 +1,27 @@
+/* docs/stylesheets/extra.css */
+
+/* 1. 讓程式碼區塊更有科技感 */
+.md-typeset pre > code {
+    background-color: #0a0e17; /* 呼應首頁的午夜藍背景 */
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* 2. 強調數學公式的顯示 (LaTeX) */
+.md-typeset .MathJax_Display {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #00f0ff; /* 加上科技藍邊框 */
+    overflow-x: auto;
+}
+
+/* 3. 美化提示區塊 (Admonition) */
+.md-typeset .admonition.info, 
+.md-typeset details.info {
+    border-color: #00f0ff;
+}
+.md-typeset .info > .admonition-title, 
+.md-typeset .info > summary {
+    background-color: rgba(0, 240, 255, 0.1);
+}
