@@ -34,14 +34,14 @@ theme:
 markdown_extensions:
   - admonition               # 支援警告/提示區塊
   - pymdownx.details         # 支援可折疊區塊
-  - pymdownx.superfences
+  - pymdownx.superfences     # 強化程式碼區塊功能
   - pymdownx.highlight:
-      anchor_linenums: true
+      anchor_linenums: true    # 程式碼行號可點擊，方便參考
       use_pygments: true       # 讓程式碼高亮顏色與主題一致
   - pymdownx.arithmatex:     # 量化公式必備
-      generic: true
+      generic: true       # 使用 MathJax 的通用配置，適合大多數情況       
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/extra.css # 你可以在這裡加入自訂的 CSS 來微調外觀
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
+  - javascripts/mathjax.js  # 如果需要額外的 JavaScript，可以放
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js   # 從 CDN 引入 MathJax，確保公式能正確渲染
