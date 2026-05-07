@@ -1,0 +1,13 @@
+site_name: 量化研究與 AI 筆記庫
+site_dir: notes  # 關鍵：將編譯結果輸出到根目錄的 notes 資料夾
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: teal
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
