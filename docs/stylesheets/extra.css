@@ -1,104 +1,80 @@
-/* docs/stylesheets/extra.css */
-
-/* 1. 讓程式碼區塊更有科技感 */
-.md-typeset pre > code {
-    background-color: #0a0e17; /* 呼應首頁的午夜藍背景 */
-    border: 1px solid rgba(0, 240, 255, 0.2);
-    border-radius: 8px;
-}
-
-/* 2. 強調數學公式的顯示 (LaTeX) */
-.md-typeset .MathJax_Display {
-    background-color: rgba(255, 255, 255, 0.02);
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 3px solid #00f0ff; /* 加上科技藍邊框 */
-    overflow-x: auto;
-}
-
-/* 3. 美化提示區塊 (Admonition) */
-.md-typeset .admonition.info, 
-.md-typeset details.info {
-    border-color: #00f0ff;
-}
-.md-typeset .info > .admonition-title, 
-.md-typeset .info > summary {
-    background-color: rgba(0, 240, 255, 0.1);
-}
-
 /* =========================================
-   MkDocs Material - 中文排版與文字格式優化
+   AQR_LAB 專屬：官方精緻質感 + 中文排版優化
 ========================================= */
 
-/* 1. 全局文字設定 (針對 MkDocs 的內容區塊 .md-typeset) */
+/* 1. 全局中文排版 (移除寫死的顏色，交由系統日夜模式控制) */
 .md-typeset {
-    /* 設定適合中文閱讀的字體族系：優先使用系統原生黑體，再退回微軟正黑體 */
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "PingFang SC", "Microsoft JhengHei", sans-serif;
-    font-size: 16px;         /* 基礎字體大小 */
-    line-height: 1.8;        /* 拉大行距，避免中文字黏在一起，提升長篇閱讀舒適度 */
-    letter-spacing: 0.03em;  /* 稍微拉開字距，增加呼吸感 */
-    color: #e2e8f0;          /* 柔和的淺灰白色，保護眼睛 */
+    font-size: 0.85rem;      /* 官方精緻感偏好較小字體 */
+    line-height: 1.7;        /* 適合中文閱讀的行距 */
+    letter-spacing: 0.02em;
 }
 
-/* 2. 標題層級優化 (H1 ~ H3) */
+/* 2. 標題層級優化 (使用主題的主色調變數，支援日夜自動變色) */
 .md-typeset h1, 
-.md-typeset h2, 
-.md-typeset h3 {
+.md-typeset h2 {
     font-weight: 700;
-    color: #00f0ff;          /* 使用科技青綠色作為標題色 */
-    margin-top: 1.8em;       /* 增加標題上方的留白 */
-    margin-bottom: 0.8em;
-    line-height: 1.4;
-}
-
-.md-typeset h1 { 
-    font-size: 2.2em; 
-    letter-spacing: 0.05em;
+    color: var(--md-primary-fg-color); /* 自動跟隨主題色 (例如靛藍色) */
 }
 
 .md-typeset h2 { 
-    font-size: 1.7em; 
-    border-bottom: 1px solid rgba(0, 240, 255, 0.2); /* 在 H2 下方加一條淡淡的分隔線 */
+    margin-top: 2em; 
+    border-bottom: 1px solid var(--md-default-fg-color--lightest); 
     padding-bottom: 0.3em;
 }
 
-.md-typeset h3 { 
-    font-size: 1.3em; 
-    color: #ffffff;          /* H3 改用純白，區分層級 */
+/* 3. 數學公式 (LaTeX) 區塊美化 */
+.md-typeset .MathJax_Display {
+    background-color: var(--md-code-bg-color); /* 自動適應日夜背景 */
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--md-primary-fg-color); /* 左側色條標示 */
+    overflow-x: auto;
 }
 
-/* 3. 段落與強調字優化 */
-.md-typeset p {
-    margin-bottom: 1.2em;    /* 段落之間的距離 */
+/* 4. 程式碼區塊圓角優化 */
+.md-typeset pre > code {
+    border-radius: 0.4rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* 5. 粗體字優化 (給予極淡的底色凸顯) */
 .md-typeset strong {
-    color: #ffffff;          /* 讓粗體字在深色背景中更亮白顯眼 */
     font-weight: 700;
-    background: rgba(255, 255, 255, 0.05); /* 給粗體字加一點極淡的背景凸顯 */
+    background: var(--md-default-fg-color--lightest);
     padding: 0 4px;
     border-radius: 4px;
 }
 
-/* 4. 超連結優化 */
+/* 6. 超連結優化 (乾淨的底線效果) */
 .md-typeset a {
-    color: #00f0ff;
     text-decoration: none;
-    border-bottom: 1px dashed rgba(0, 240, 255, 0.4); /* 使用虛線底線，更具科技感 */
-    transition: all 0.3s ease;
+    font-weight: 500;
+    border-bottom: 1px dashed var(--md-typeset-a-color);
+    transition: all 0.2s ease;
 }
 
 .md-typeset a:hover {
-    color: #ffffff;
-    border-bottom: 1px solid #00f0ff; /* 滑鼠移過去變實線 */
-    background: rgba(0, 240, 255, 0.1);
+    border-bottom: 1px solid var(--md-typeset-a-color);
+    background: var(--md-default-fg-color--lightest);
 }
 
-/* 5. 列表項目優化 (Bullet Points) */
-.md-typeset ul, .md-typeset ol {
-    margin-bottom: 1.5em;
+/* 7. 官方首頁常見的「網格卡片 (Grid Cards)」 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 1rem;
+    margin: 1.5rem 0;
 }
 
-.md-typeset li {
-    margin-bottom: 0.5em;
+.grid > .card {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.4rem;
+    padding: 1rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.grid > .card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
 }

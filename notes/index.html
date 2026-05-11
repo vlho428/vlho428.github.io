@@ -10,6 +10,8 @@
       
       
       
+        <link rel="next" href="infra/data_center/">
+      
       
         
       
@@ -40,8 +42,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Noto Sans TC";--md-code-font:"JetBrains Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -63,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#md" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -84,7 +86,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="AQR_LAB 筆記庫" class="md-header__button md-logo" aria-label="AQR_LAB 筆記庫" data-md-component="logo">
       
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              測試MD檔
+              量化研究中心
             
           </span>
         </div>
@@ -118,7 +122,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切換至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切換至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切換至淺色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切換至淺色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
     
   
 </form>
@@ -154,6 +172,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -172,14 +192,8 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -198,17 +212,63 @@
   
     
   
-  測試MD檔
+  量化研究中心
 
       </a>
     </li>
   
 
       
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="infra/data_center/" class="md-tabs__link">
+          
+  
+  
+  Infra
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="quant/msci_taiwan/" class="md-tabs__link">
+          
+  
+  
+  Quant
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -225,7 +285,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="AQR_LAB 筆記庫" class="md-nav__button md-logo" aria-label="AQR_LAB 筆記庫" data-md-component="logo">
       
@@ -260,7 +322,7 @@
   <span class="md-ellipsis">
     
   
-    測試MD檔
+    量化研究中心
   
 
     
@@ -278,7 +340,7 @@
   <span class="md-ellipsis">
     
   
-    測試MD檔
+    量化研究中心
   
 
     
@@ -304,10 +366,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#information-ratio-ir" class="md-nav__link">
+  <a href="#msci" class="md-nav__link">
     <span class="md-ellipsis">
       
-        資訊比率 (Information Ratio, IR)
+        📈 MSCI 策略回測
       
     </span>
   </a>
@@ -315,10 +377,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#ai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        獲取台股價量特徵
+        ⚡ AI 算力中心
       
     </span>
   </a>
@@ -333,60 +395,186 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Infra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="infra/data_center/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 算力中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quant
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Quant
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quant/msci_taiwan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MSCI 策略回測
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#information-ratio-ir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        資訊比率 (Information Ratio, IR)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        獲取台股價量特徵
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
             
           
           
@@ -398,41 +586,19 @@
 
 
 
-<h1 id="md">測試MD檔</h1>
-<p>目前專注於 MSCI Taiwan Index 增強策略與 10 Barra 風格因子模型整合。
-進入左側選單查看完整回測紀錄與 Python 實作片段。</p>
-<h3 id="information-ratio-ir">資訊比率 (Information Ratio, IR)</h3>
-<p>在評估 Barra 因子表現時，我們使用資訊比率來衡量主動報酬的穩定性。公式如下：</p>
-<div class="arithmatex">\[
-IR = \frac{E[R_p - R_b]}{\sigma(R_p - R_b)} = \frac{\alpha}{\omega}
-\]</div>
-<p>其中 <span class="arithmatex">\(\alpha\)</span> 代表主動預期報酬，<span class="arithmatex">\(\omega\)</span> 代表追蹤誤差 (Tracking Error)。</p>
-<h3 id="_1">獲取台股價量特徵</h3>
-<p>=== "Python (Qlib API)"
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">qlib</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">qlib.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">D</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 讀取 MSCI Taiwan 成分股</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">features</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">features</span><span class="p">(</span><span class="s1">&#39;MSCI_TW&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;$close&#39;</span><span class="p">,</span> <span class="s1">&#39;$volume&#39;</span><span class="p">],</span> <span class="n">start_time</span><span class="o">=</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</code></pre></div></p>
-<p>=== "SQL (MySQL WSL2)"
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- 從本地資料庫直接查詢</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">trade_date</span><span class="p">,</span><span class="w"> </span><span class="n">ticker</span><span class="p">,</span><span class="w"> </span><span class="k">close</span><span class="p">,</span><span class="w"> </span><span class="n">volume</span><span class="w"> </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">market_data</span><span class="w"> </span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">index_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;MSCI_TW&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">trade_date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">;</span>
-</code></pre></div></p>
-<div class="admonition success">
-<p class="admonition-title">環境配置成功</p>
-<p>NVIDIA GB200 NVL72 單線路圖規劃完成，預期 PUE 成功壓制在 1.1 以下。</p>
+<h1 id="_1">量化研究中心</h1>
+<p>歡迎來到核心知識庫。請選擇你要查閱的領域：</p>
+<div class="grid">
+<div class="card">
+<h3 id="msci">📈 MSCI 策略回測</h3>
+<p>包含 Barra 10 因子模型的推導與 Qlib 實作細節。
+<a class="md-button md-button--primary" href="quant/msci_taiwan/">閱讀文件 ➔</a></p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">版本兼容性注意</p>
-<p>在使用 PyTorch 進行神經網路訓練時，請確保安裝的驅動版本與 <strong>CUDA 12.9</strong> 完全對應，否則可能發生 WSL 內核橋接失敗。</p>
+<div class="card">
+<h3 id="ai">⚡ AI 算力中心</h3>
+<p>紀錄 5MW 資料中心、PUE 計算與 NVIDIA GB200 架構。
+<a class="md-button" href="infra/data_center/">閱讀文件 ➔</a></p>
 </div>
-<div class="admonition failure">
-<p class="admonition-title">策略失效紀錄</p>
-<p>在測試中發現，單純依賴「規模因子 (Size)」在近期的台股市場中會產生嚴重的回撤，需導入動量因子進行對沖。</p>
 </div>
 
 
@@ -489,7 +655,7 @@ IR = \frac{E[R_p - R_b]}{\sigma(R_p - R_b)} = \frac{\alpha}{\omega}
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.top", "navigation.tracking", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "toc.integrate", "content.code.copy", "content.code.annotate", "content.action.edit", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
